@@ -1,0 +1,23 @@
+package com.hms.product.dao;
+
+import java.util.List;
+
+import org.springframework.transaction.annotation.Transactional;
+
+import com.hms.product.entity.Product;
+
+public interface ProductDao {
+
+	List<Product> findAll();
+
+	void saveProduct(Product prod);
+
+	Product findById(int id);
+
+	List<Product> findByName(String productName);
+
+	Object updateProduct(Product newProduct) throws RuntimeException;
+
+	void deleteById(int id);
+
+}
